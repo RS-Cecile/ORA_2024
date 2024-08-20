@@ -11,7 +11,7 @@ st.set_page_config(
 
 st.image('ORA2024.png',width = 500)
 
-st.markdown("# L'Opinion des Responsables Associatifs face aux enjeux liés à la transition écologique")
+st.markdown("# L'Opinion des responsables associatifs face aux enjeux liés à la transition écologique")
 st.sidebar.markdown("# Présentation")
 
 ("")
