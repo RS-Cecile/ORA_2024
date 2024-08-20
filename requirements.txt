@@ -1,0 +1,4 @@
+openpyxl
+xlsxwriter
+matplotlib
+plotly==5.23.0
