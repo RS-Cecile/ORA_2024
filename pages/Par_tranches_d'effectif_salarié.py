@@ -106,8 +106,7 @@ with tab2:
          "3 à 5 salariés",
          "6 à 9 salariés",
          "10 à 19 salariés",
-         "20 à 49 salariés",
-         "50 salariés et plus"))
+         "20 à 49 salariés"))
 
     # Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?
     table_ = pd.read_excel( fichier, sheet_name = sheet ,skiprows=11,nrows= 8, index_col =0, dtype = "object")
