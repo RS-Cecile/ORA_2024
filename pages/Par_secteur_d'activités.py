@@ -230,12 +230,12 @@ with tab3 :
                  "Le réemploi, le recours aux recycleries et aux entreprises d'insertion à vocation environnementale",
                  "La sobriété numérique (utilisation durable et raisonnable du numérique)"]
 
-    # Liste des tables
+   # Liste des tables
     tables = [table1, table2, table3, table4, table5, table6, table7]
 
 
     # Fonction pour créer un fichier Excel avec les questions et les tables
-    def to_excel(table, tables, questions, table8):
+    def to_excel(table,tables, questions, table8):
         output = BytesIO()
         with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
             workbook = writer.book
@@ -285,7 +285,6 @@ with tab3 :
                     worksheet3.write(row_idx + 3, col_idx, value, border_format)
 
         return output.getvalue()
-
 
     # Bouton de téléchargement
     tables = [table1, table2, table3, table4, table5, table6, table7]
