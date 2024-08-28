@@ -11,7 +11,7 @@ import xlsxwriter
 from io import BytesIO
 
 st.set_page_config(
-    page_title="ORA 2024 - Par territoires",
+    page_title="ORA 2024 - Par territoire",
     page_icon=	":chart_with_upwards_trend:",
     layout="wide")
 
