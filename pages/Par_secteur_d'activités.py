@@ -21,10 +21,6 @@ st.sidebar.markdown("# Par secteur d'activités")
 fichier = "ORA_donnee.xlsx"
 sheet = "Secteurs"
 
-
-
-
-
 # Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?
 table = pd.read_excel( fichier, sheet_name = sheet ,skiprows=9,nrows= 9, index_col =0, dtype = "object")
 table = table.applymap(lambda x: f'{x * 100:.0f}%')
@@ -102,7 +98,7 @@ with tab1:
     st.table(styled_table8)
 
 with tab2:
-  option = st.selectbox(
+    option = st.selectbox(
         "**Veuillez sélectionner le secteur d'activité :**",
         ("Social",
          "Santé, recherche médicale, aide aux malades",
