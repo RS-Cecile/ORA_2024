@@ -215,6 +215,8 @@ with tab2:
     fig_col.sort_values(ascending= True, inplace = True)
     fig, ax = plt.subplots()
     fig_col.plot(kind='barh', ax = ax)
+    for index, value in enumerate(fig_col):
+        ax.text(value, index, f'{value:.0f}%', va='center')
     ax.set_xlabel("Valeurs (en %)")
     st.header("Qu'est-ce qui pourrait aider votre association à [mieux] prendre en compte les enjeux liés à la transition écologique dans ses activités et son fonctionnement ? *Plusieurs réponses possibles*")
     st.pyplot(fig)
