@@ -110,7 +110,7 @@ with tab1:
     
 with tab2:
     option = st.selectbox(
-        "**Veuillez sélectionner le territoire :**",
+        "**Sélectionnez le territoire souhaité, les résultats correspondants apparaîtront dans la colonne bleue du tableau et sous forme de graphiques :**",
         ("En zone rurale",
          "En zone péri-urbaine",
          "En zone urbaine",
