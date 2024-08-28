@@ -10,11 +10,11 @@ import xlsxwriter
 from io import BytesIO
 
 st.set_page_config(
-    page_title="ORA 2024 - Par tranches d'effectif salarié",
+    page_title="ORA 2024 - Par tranche d'effectif salarié",
     page_icon=	":chart_with_upwards_trend:",
     layout="wide")
 
-st.markdown("# Résultats par tranches d'effectif salarié")
+st.markdown("# Résultats par tranche d'effectif salarié")
 st.sidebar.markdown("# Par tranches d'effectif salarié")
 
 fichier = "ORA_donnee.xlsx"
