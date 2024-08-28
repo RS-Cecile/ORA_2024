@@ -79,7 +79,7 @@ styled_table7 = table7.style.set_properties(**{'text-align': 'center'})
 styled_table8 = table8.style.set_properties(**{'text-align': 'center'})
 
 with tab1:
-  st.header("Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?")
+    st.header("Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?")
     st.table(styled_table)
     st.header("Quelle attention porte votre association aux pratiques suivantes dans la conduite de ses activités et dans son organisation ?")
     st.subheader("Les économies d'énergie (électricité, gaz,...) et de la ressource en eau")
