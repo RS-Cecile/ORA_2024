@@ -99,7 +99,7 @@ with tab1:
 
 with tab2:
     option = st.selectbox(
-        "**Veuillez sélectionner le secteur d'activité :**",
+        "**Sélectionnez le secteur d'activité souhaité, les résultats correspondants apparaîtront dans la colonne bleue du tableau et sous forme de graphiques :**",
         ("Social",
          "Santé, recherche médicale, aide aux malades",
          "Solidarité internationale",
