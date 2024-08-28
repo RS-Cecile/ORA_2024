@@ -15,8 +15,8 @@ st.set_page_config(
     page_icon=	":chart_with_upwards_trend:",
     layout="wide")
 
-st.title("Résultats par territoires")
-st.sidebar.markdown("# Par territoires")
+st.title("Résultats par territoire")
+st.sidebar.markdown("# Par territoire")
 
 fichier = "ORA_donnee.xlsx"
 sheet = "Territoire"
