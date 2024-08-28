@@ -76,7 +76,7 @@ styled_table6 = table6.style.set_properties(**{'text-align': 'center'})
 styled_table7 = table7.style.set_properties(**{'text-align': 'center'})
 styled_table8 = table8.style.set_properties(**{'text-align': 'center'})
 
-tab1, tab2, tab3 = st.tabs(["Ensemble des tranches d'effectif salarié ","Par tranches d'effectif salarié",  "Téléchargement des données"])
+tab1, tab2, tab3 = st.tabs(["Ensemble des tranches d'effectif salarié ","Par tranche d'effectif salarié",  "Téléchargement des données"])
 
 with tab1:
     st.header("Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?")
@@ -101,7 +101,7 @@ with tab1:
     
 with tab2:
     option = st.selectbox(
-        "**Veuillez sélectionner la tranche d'effectif salarié:**",
+        "**Sélectionnez la tranche d'effectif salarié souhaitée, les résultats correspondants apparaîtront dans la colonne bleue du tableau et sous forme de graphiques :**",
         ("1 ou 2 salariés",
          "3 à 5 salariés",
          "6 à 9 salariés",
