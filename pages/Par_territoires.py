@@ -118,20 +118,20 @@ with tab2:
          "En ZFRR*"))
 
     # Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?
-    table = pd.read_excel(fichier, sheet_name=sheet, skiprows=9, nrows=9, index_col=0)
-    table = table.applymap(lambda x: f'{x * 100:.0f}%')
-    table = table.rename(columns = {"En ZFRR" : "En ZFRR*"})
+    table_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=9, nrows=9, index_col=0)
+    table_ = table_.applymap(lambda x: f'{x * 100:.0f}%')
+    table_ = table_.rename(columns = {"En ZFRR" : "En ZFRR*"})
     slice = [option]
-    forme = table.style.set_properties(**{'background-color' : 'cornflowerblue', 'text-align': 'center', 'color' : "white"}, subset = slice)
+    forme = table_.style.set_properties(**{'background-color' : 'cornflowerblue', 'text-align': 'center', 'color' : "white"}, subset = slice)
     st.header("Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?")
     st.table(forme)
 
     "\* Anciennement dans une zone de revitalisation rurale désormais appelée **France Ruralités Revitalisation** (ZFRR)"
 
     # Quelle attention porte votre association aux pratiques suivantes dans la conduite de ses activités et dans son organisation ?
-    table1 = pd.read_excel( fichier, sheet_name = sheet ,skiprows=87,nrows= 3, index_col =0)
-    table1 = table1.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table1[option]*100
+    table1_ = pd.read_excel( fichier, sheet_name = sheet ,skiprows=87,nrows= 3, index_col =0)
+    table1_ = table1_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table1_[option]*100
     names = fig_col.index
     st.header("Quelle attention porte votre association aux pratiques suivantes dans la conduite de ses activités et dans son organisation ?")
     st.subheader("Les économies d'énergie (électricité, gaz,...) et de la ressource en eau")
@@ -141,9 +141,9 @@ with tab2:
     st.plotly_chart(fig, use_container_width = True)
 
     # La limitation des déplacements, les transports collectifs et les mobilités douces (vélo…)
-    table2 = pd.read_excel(fichier, sheet_name=sheet, skiprows=95, nrows=3, index_col=0)
-    table2 = table2.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table2[option] * 100
+    table2_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=95, nrows=3, index_col=0)
+    table2_ = table2_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table2_[option] * 100
     names = fig_col.index
     st.subheader("La limitation des déplacements, les transports collectifs et les mobilités douces (vélo…)")
     fig = px.pie(fig_col, values=option, names=names, color = names , color_discrete_map = {"Beaucoup d'attention" : "darkblue",
@@ -152,9 +152,9 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
     # La gestion des déchets (tri sélectif, moins d'emballage, biodéchets...)
-    table3 = pd.read_excel(fichier, sheet_name=sheet, skiprows=103, nrows=3, index_col=0)
-    table3 = table3.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table3[option] * 100
+    table3_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=103, nrows=3, index_col=0)
+    table3_ = table3_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table3_[option] * 100
     names = fig_col.index
     st.subheader("La gestion des déchets (tri sélectif, moins d'emballage, biodéchets...)")
     fig = px.pie(fig_col, values=option, names=names, color = names , color_discrete_map = {"Beaucoup d'attention" : "darkblue",
@@ -163,9 +163,9 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
     # Des achats responsables (en local, circuit-court...)
-    table4 = pd.read_excel(fichier, sheet_name=sheet, skiprows=111, nrows=3, index_col=0)
-    table4 = table4.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table4[option] * 100
+    table4_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=111, nrows=3, index_col=0)
+    table4_ = table4_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table4_[option] * 100
     names = fig_col.index
     st.subheader("Des achats responsables (en local, circuit-court...)")
     fig = px.pie(fig_col, values=option, names=names, color = names , color_discrete_map = {"Beaucoup d'attention" : "darkblue",
@@ -174,9 +174,9 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
     # Le recours à des fournitures plus écologiques (papier recyclé, cartouches d'encre rechargeables...)
-    table5 = pd.read_excel(fichier, sheet_name=sheet, skiprows=119, nrows=3, index_col=0)
-    table5 = table5.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table5[option] * 100
+    table5_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=119, nrows=3, index_col=0)
+    table5_ = table5_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table5_[option] * 100
     names = fig_col.index
     st.subheader("Le recours à des fournitures plus écologiques (papier recyclé, cartouches d'encre rechargeables...)")
     fig = px.pie(fig_col, values=option, names=names, color = names , color_discrete_map = {"Beaucoup d'attention" : "darkblue",
@@ -185,9 +185,9 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
     # Le réemploi, le recours aux recycleries et aux entreprises d'insertion à vocation environnementale
-    table6 = pd.read_excel(fichier, sheet_name=sheet, skiprows=127, nrows=3, index_col=0)
-    table6 = table6.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table6[option] * 100
+    table6_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=127, nrows=3, index_col=0)
+    table6_ = table6_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table6_[option] * 100
     names = fig_col.index
     st.subheader("Le réemploi, le recours aux recycleries et aux entreprises d'insertion à vocation environnementale")
     fig = px.pie(fig_col, values=option, names=names, color = names , color_discrete_map = {"Beaucoup d'attention" : "darkblue",
@@ -196,9 +196,9 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
     # La sobriété numérique (utilisation durable et raisonnable du numérique)
-    table7 = pd.read_excel(fichier, sheet_name=sheet, skiprows=135, nrows=3, index_col=0)
-    table7 = table7.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table7[option] * 100
+    table7_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=135, nrows=3, index_col=0)
+    table7_ = table7_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table7_[option] * 100
     names = fig_col.index
     st.subheader("La sobriété numérique (utilisation durable et raisonnable du numérique)")
     fig = px.pie(fig_col, values=option, names=names, color = names , color_discrete_map = {"Beaucoup d'attention" : "darkblue",
@@ -208,7 +208,7 @@ with tab2:
 
     liste = []
 
-    for tab in (table1, table2, table3, table4, table5, table6, table7):
+    for tab in (table1_, table2_, table3_, table4_, table5_, table6_, table7_):
         derniere_ligne = tab[option].iloc[-1]*100
         liste.append(derniere_ligne)
 
@@ -227,9 +227,9 @@ with tab2:
     ax.set_xlabel("Valeurs (en %)")
     st.pyplot(fig)
 
-    table8 = pd.read_excel(fichier, sheet_name=sheet, skiprows=147, nrows=9, index_col=0)
-    table8 = table8.rename(columns={"En ZFRR": "En ZFRR*"})
-    fig_col = table8[option]*100
+    table8_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=147, nrows=9, index_col=0)
+    table8_ = table8_.rename(columns={"En ZFRR": "En ZFRR*"})
+    fig_col = table8_[option]*100
     fig_col.sort_values(ascending= True, inplace = True)
     fig, ax = plt.subplots()
     fig_col.plot(kind='barh', ax = ax)
