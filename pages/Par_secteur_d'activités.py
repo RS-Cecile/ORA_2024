@@ -109,7 +109,9 @@ with tab2:
          "Loisirs",
          "Jeunesse, éducation populaire",
          "Autres"))
-
+    
+    st.markdown(f'<h1 style = "font-size:30px;"> Vous avez sélectioné : </h1>'f'<h1 style = "font-size:40px;color:royalblue;"> {option} </h1>', unsafe_allow_html=True)
+    
     # Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?
     table_ = pd.read_excel(fichier, sheet_name=sheet, skiprows=9, nrows=9, index_col=0)
     table_ = table_.applymap(lambda x: f'{x * 100:.0f}%')
