@@ -74,7 +74,7 @@ styled_table6 = table6.style.set_properties(**{'text-align': 'center'})
 styled_table7 = table7.style.set_properties(**{'text-align': 'center'})
 styled_table8 = table8.style.set_properties(**{'text-align': 'center'})
 
-tab1, tab2, tab3 = st.tabs([ "**Ensemble des secteurs d'activités**","Par secteur d'activités", "Téléchargement des données"])
+tab1, tab2, tab3 = st.tabs([ "Ensemble des secteurs d'activités","Par secteur d'activités", "Téléchargement des données"])
 
 with tab1:
     st.header("Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?")
