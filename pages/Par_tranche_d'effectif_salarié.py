@@ -108,6 +108,8 @@ with tab2:
          "10 à 19 salariés",
          "20 à 49 salariés"))
 
+     st.markdown(f'<h1 style = "font-size:30px;"> Vous avez sélectionné : </h1>'f'<h1 style = "font-size:40px;color:royalblue;text-transform:uppercase;"> {option} </h1>', unsafe_allow_html=True)
+
     # Votre association prend-elle en compte les enjeux liés à la transition écologique pour mener à bien ses activités et organiser son action ?
     table_ = pd.read_excel( fichier, sheet_name = sheet ,skiprows=11,nrows= 8, index_col =0, dtype = "object")
     table_ = table_.applymap(lambda x: f'{x * 100:.0f}%')
